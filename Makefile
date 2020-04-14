@@ -205,7 +205,7 @@ $(PYODIDE_EMCC):
 		if hash ccache &>/dev/null; then \
 			ln -s `which ccache` $@ ; \
 		else \
-	 		ln -s emsdk/emsdk/emscripten/tag-$(EMSCRIPTEN_VERSION)/emcc $@; \
+	 		ln -s emsdk/emsdk/emscripten/$(EMSCRIPTEN_VERSION)/emcc $@; \
 		fi; \
 	fi
 
@@ -216,7 +216,7 @@ $(PYODIDE_CXX):
 		if hash ccache &>/dev/null; then \
 			ln -s `which ccache` $@ ; \
 		else \
-			ln -s emsdk/emsdk/emscripten/tag-$(EMSCRIPTEN_VERSION)/em++ $@; \
+			ln -s emsdk/emsdk/emscripten/$(EMSCRIPTEN_VERSION)/em++ $@; \
 		fi; \
 	fi
 
