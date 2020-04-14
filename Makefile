@@ -16,13 +16,13 @@ PYODIDE_CXX=$(PYODIDE_ROOT)/ccache/em++
 SHELL := /bin/bash
 CC=emcc
 CXX=em++
-OPTFLAGS=-O3
+OPTFLAGS=-Oz
 CFLAGS=$(OPTFLAGS) -g -I$(PYTHONINCLUDE) -Wno-warn-absolute-paths
 CXXFLAGS=$(CFLAGS) -std=c++14
 
 
 LDFLAGS=\
-	-O3 \
+	-Oz \
 	-s MODULARIZE=1 \
 	$(CPYTHONROOT)/installs/python-$(PYVERSION)/lib/libpython$(PYMINOR).a \
 	$(LZ4LIB) \
